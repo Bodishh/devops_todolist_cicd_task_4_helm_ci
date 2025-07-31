@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: helm-artifacts
-          path: helm-charts
+          path: helm-charts/todoapp
 
 
   docker-ci:
@@ -99,7 +99,7 @@ jobs:
     - uses: actions/download-artifact@v4
       with:
         name: helm-artifacts
-        path: .
+        path: ./todoapp
 
     - name: Set up Helm
       uses: azure/setup-helm@v4.2.0
